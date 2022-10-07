@@ -16,7 +16,7 @@ func (app *application) routes () *httprouter.Router{
 	
 	router.HandlerFunc(http.MethodGet, "/v1/healthcheck", app.healthcheckHandler)
 	router.HandlerFunc(http.MethodPost, "/v1/creator", app.createEntryHandler)
-	//router.HandlerFunc(http.MethodGet, "/v1/randomize/:id", app.showEntryHandler)
+	router.HandlerFunc(http.MethodGet, "/v1/randomize/:id", app.outputString)
 	
 	return router
 }

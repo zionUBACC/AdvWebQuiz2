@@ -1,5 +1,6 @@
 // Filename: cmd/api/creator.go
 package main
+
 import (
 	"fmt"
 	"net/http"
@@ -24,10 +25,10 @@ func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Reques
 	}
 	//copying the values
 	jsondata := &data.About{
-		Name: input.Name,
-		Email: input.Email,
+		Name:      input.Name,
+		Email:     input.Email,
 		Education: input.Education,
-		Hobby: input.Hobby,
+		Hobby:     input.Hobby,
 	}
 
 	//initialize a new validator instance
@@ -40,6 +41,4 @@ func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Reques
 	}
 	//Display the request
 	fmt.Fprintf(w, "%+v\n", input)
-
-	//fmt.Fprintln(w, "Create a New Entry")
 }
