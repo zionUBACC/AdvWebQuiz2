@@ -10,7 +10,7 @@ import (
 )
 
 //create entires hander for the POST /v1/entries endpoint
-func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Request){
+func (app *application) displayAbout(w http.ResponseWriter, r *http.Request){
 	//our target decode destination
 	var input struct{
 		Name      string   `json:"name"`
