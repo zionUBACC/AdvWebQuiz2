@@ -9,7 +9,7 @@ import (
 	"Quiz2Json.zioncastillo.net/internal/validator"
 )
 
-//create entires hander for the POST /v1/entries endpoint
+//create about hander for the POST /v1/creator endpoint
 func (app *application) displayAbout(w http.ResponseWriter, r *http.Request){
 	//our target decode destination
 	var input struct{
